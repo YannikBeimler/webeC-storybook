@@ -5,33 +5,55 @@
   <title>Storybook for the Web Engineering Module</title>
   
   <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
       @import url("style.css");
   </style>
 </head>
 <body>
   <header>
-    <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+      <div class="background"></div>
+      <div class="banner-overlay">
+          <div class="centered">
+              <a href="./index.html"><img src="images/fhnw_logo_inv.png" alt="Home"/></a>
+              <div><dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module</div>
+          </div>
+      </div>
   </header>
-  <main>
+    <nav>
+        <div>
+            <div class="centered">
+                <div class="table"><div>
+                    <a href="#mode">Delivery Mode</a>
+                    <a href="#exam-details">Delivery Dates & Examination Details</a>
+                    <a href="#effort">Total Effort</a>
+                    <a href="#criteria">Passing Criteria</a>
+                </div></div>
+            </div>
+        </div>
+    </nav>
+  <main class="centered">
     <section id="context">
+        <div class="ancor"><div id="mode"></div></div>
       <h1>Module delivery mode</h1>
       <p>This installment of the <dfn title="WebEngineering">webeC</dfn> module is
         delivered in the spring semester of 2019.
       </p>
     </section>
     <section id="content">
-      <h1>Delivery dates and examination details</h1>
+        <div class="ancor"><div id="exam-details"></div></div>
+      <h1 id="exam-details">Delivery dates and examination details</h1>
       <article>
         <h2>Overview</h2>
-        <table>
+        <table class="date-table" cellspacing="0">
           <caption>Delivery dates</caption>
           <thead>
             <tr>
               <th>Date</th>
-              <th>#</th>
+              <th>Time</th>
               <th>Topic</th>
-            </tr>
-            
+            </tr>            
+          </thead>
+          <tbody>
             <tr><td>Mi, 20.02.19</td><td>08:15 - 11:00</td><td>HTML</td></tr>
             <tr><td>Mi, 27.02.19</td><td>08:15 - 11:00</td><td>CSS</td></tr>
             <tr><td>Mi, 06.03.19</td><td>08:15 - 11:00</td><td>Grails, Web, MVC,</td></tr>
@@ -40,17 +62,15 @@
             <tr><td>Mi, 27.03.19</td><td>08:15 - 11:00</td><td>Persistence, DB-Access (GORM)</td></tr>
             <tr><td>Mi, 03.04.19</td><td>08:15 - 11:00</td><td>REST, Services</td></tr>
             <tr><td>Mi, 10.04.19</td><td>08:15 - 11:00</td><td>Role-based Security</td></tr>
-            <tr><td>Mi, 17.04.19</td><td>08:15 - 11:00</td><td>Übungsvorbereitung ** Anwesenheitspflicht **</td></tr>
-            <tr><td>24.04. - 08.05</td><td></td><td>Ferien</td></tr>
+            <tr><td>Mi, 17.04.19</td><td>08:15 - 11:00</td><td><strong>Übungsvorbereitung ** Anwesenheitspflicht **</strong></td></tr>
+            <tr class="weak"><td>Mi, 24.04.19</td><td></td><td>Ferien</td></tr>
+            <tr class="weak"><td>Mi, 01.05.19</td><td></td><td>Ferien</td></tr>
+            <tr class="weak"><td>Mi, 08.05.19</td><td></td><td>Ferien</td></tr>
             <tr><td>Mi, 15.05.19</td><td>08:15 - 11:00</td><td>Übungsanlass</td></tr>
-            <tr><td>Mi, 22.05.19</td><td>08:15 - 11:00</td><td>Javascript, Übungsabgabe</td></tr>
+            <tr><td>Mi, 22.05.19</td><td>08:15 - 11:00</td><td>Javascript, <strong>Übungsabgabe</strong></td></tr>
             <tr><td>Mi, 29.05.19</td><td>08:15 - 11:00</td><td>Responsive / Mobile Web</td></tr>
             <tr><td>Mi, 05.06.19</td><td>08:15 - 11:00</td><td>Deployment</td></tr>
             <tr><td>Mi, 12.06.19</td><td>08:15 - 11:00</td><td>Prüfungsvorbereitung</td></tr>
-            
-          </thead>
-          <tbody>
-            <!-- fill from storybook.txt here -->
           </tbody>
           <tfoot>
             <tr>
@@ -60,6 +80,7 @@
         </table>
       </article>
       <article>
+          <div class="ancor"><div id="effort"></div></div>
         <h2>Total Effort</h2>
         <p>Classroom lectures add up to <code>14 * 3h = 42h</code>.</p>
         <p>Prework and afterwork, including homework adds up to <code>14 * 1h = 14h</code>.</p>
@@ -68,7 +89,8 @@
         <p>Writing the final exam takes <code>2h</code>.</p>
         <p>This makes a total of <code>90h</code>.</p>
       </article>
-      <article id="criteria">
+      <article>
+          <div class="ancor"><div id="criteria"></div></div>
         <h2>Passing criteria</h2>
         <ul>
           <li>You have to attend the exercise preparation event.</li>
@@ -81,8 +103,13 @@
     </section>
   </main>
   <footer>
-    <address>Dierk König, 5.2B16, mailto:dierk.koenig@fhnw.ch</address>
-    <address>Christian Ribeaud, mailto:christian.ribeaud@fhnw.ch</address>
+      <div class="centered">
+        <address>Dierk König, 5.2B16, <a href="mailto:dierk.koenig@fhnw.ch">dierk.koenig@fhnw.ch</a></address>
+        <address>Christian Ribeaud, <a href="mailto:christian.ribeaud@fhnw.ch">christian.ribeaud@fhnw.ch</a></address>
+        <br><br>
+        <address>Yannik Beimler, <a href="mailto:yannik.beimler@students.fhnw.ch">yannik.beimler@students.fhnw.ch</a></address>
+      </div>
+      <div class="site-end"><div class="centered">&copy; Copyright by FHNW - Yannik Beimler - 2019</div></div>
   </footer>
 </body>
 </html>
